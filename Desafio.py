@@ -68,7 +68,6 @@ transcricao = driver.find_element(By.XPATH, '//*[@id="segments-container"]')
 transcricao_text = transcricao.text
 
 # Faz a limpeza dos períodos e concatena o texto, podendo retorná-lo por extenso.
-
 transcricao_sem_horarios = re.sub(r'\d{1,2}:\d{2}', '', transcricao_text)
 texto_concatenado = ' '.join(transcricao_sem_horarios.split())
 
